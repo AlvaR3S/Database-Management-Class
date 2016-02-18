@@ -1,0 +1,28 @@
+9 pts
+
+1. 
+
+Evidence looks ok. Could you have produced only 1 .pdf? It would be better organized. 
+
+
+2.
+
+The distinction between a superkey and candidate key is deficient. Remember
+that a candidate key is the minimum set of superkeys. 
+
+
+3.
+
+Perhaps the date/time fields could be nullable in the example provided. What if
+the user has never logged in?
+
+
+4.
+
+The ``access rows by content only'' rule explanation is wrong. Please check
+your notes or the book Chapter 6.1.
+
+The ``all rows must be unique'' rule is wrong. Please check your class notes or
+Chapter 6.1 of the textbook.
+
+
