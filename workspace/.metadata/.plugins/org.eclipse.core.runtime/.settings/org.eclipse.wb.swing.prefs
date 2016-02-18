@@ -1,0 +1,5 @@
+codeGeneration.deduceSettings=false
+codeGeneration.forcedMethod=jbInit
+codeGeneration.variableId=org.eclipse.wb.core.model.variable.fieldInitializer
+eclipse.preferences.version=1
+property.events.stubCreate=true

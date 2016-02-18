@@ -1,4 +1,4 @@
-﻿SELECT ordno,dollars
+SELECT ordno,dollars
 FROM Orders;
 
 SELECT name, city
@@ -17,7 +17,7 @@ SELECT name
 FROM Agents
 WHERE city !='New York' and city!='Tokyo';
 
-SELECT *
+SELECT *  
 FROM Products
 WHERE (city!='Dallas' and city!='Duluth')
 AND priceUSD >= 1.00
@@ -32,4 +32,4 @@ WHERE (mon='feb' and dollars < 500);
 
 SELECT *
 FROM Orders
-WHERE cid='c005';
+WHERE cid='c005';  

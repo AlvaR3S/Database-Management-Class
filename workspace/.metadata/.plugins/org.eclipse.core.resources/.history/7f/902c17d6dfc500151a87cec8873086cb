@@ -1,0 +1,65 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JButton;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
+public class AlvarezListExamplesFrame extends JFrame {
+
+	private JPanel contentPane;
+	private final JButton btnPrint = new JButton("Print");
+	private final JTextArea txtrOne = new JTextArea();
+	private final JScrollPane scrollPane = new JScrollPane();
+	private final JTextField textField = new JTextField();
+	private final JScrollPane scrollPane_1 = new JScrollPane();
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					AlvarezListExamplesFrame frame = new AlvarezListExamplesFrame();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public AlvarezListExamplesFrame() {
+		scrollPane_1.setViewportView(textField);
+		textField.setColumns(10);
+		jbInit();
+	}
+	private void jbInit() {
+		setTitle("Alvarez List Selection");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		btnPrint.setBounds(285, 183, 117, 29);
+		
+		contentPane.add(btnPrint);
+		scrollPane.setBounds(27, 22, 176, 136);
+		
+		contentPane.add(scrollPane);
+		txtrOne.setText("One\nTwo\nThree\nFour\nFive\nSix\nSeven\nEight\nNine\nTen");
+		scrollPane.setViewportView(txtrOne);
+		scrollPane_1.setBounds(259, 20, 166, 151);
+		
+		contentPane.add(scrollPane_1);
+	}
+}

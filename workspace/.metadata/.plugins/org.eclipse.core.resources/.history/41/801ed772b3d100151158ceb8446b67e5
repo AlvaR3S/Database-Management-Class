@@ -1,0 +1,69 @@
+import java.awt.EventQueue;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.geom.Line2D;
+
+import javax.swing.JFormattedTextField;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+public class AlvarezAdditionFrame extends JFrame {
+
+	private JPanel contentPane;
+	private final JFormattedTextField formattedTextField = new JFormattedTextField();
+	private final JFormattedTextField formattedTextField_1 = new JFormattedTextField();
+	private final JLabel label = new JLabel("+");
+	private final JLabel lblInputNumbersTo = new JLabel("Input numbers to be added");
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					AlvarezAdditionFrame frame = new AlvarezAdditionFrame();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public AlvarezAdditionFrame() {
+		jbInit();
+	}
+	private void jbInit() {
+		setTitle("Alvarez Addition Example");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		formattedTextField.setBounds(150, 68, 149, 26);
+		
+		contentPane.add(formattedTextField);
+		formattedTextField_1.setBounds(150, 91, 149, 26);
+		
+		contentPane.add(formattedTextField_1);
+		label.setBounds(132, 96, 61, 16);
+		
+		contentPane.add(label);
+		lblInputNumbersTo.setBounds(132, 40, 190, 16);
+		
+		contentPane.add(lblInputNumbersTo);
+	}
+	public void paint(Graphics g) {
+        super.paint(g);  // fixes the immediate problem.
+        Graphics2D g2 = (Graphics2D) g;
+        Line2D lin = new Line2D.Float(100, 150, 750, 260);
+        g2.draw(lin);
+    }
+}

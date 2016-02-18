@@ -1,0 +1,77 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JButton;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JList;
+import javax.swing.AbstractListModel;
+import javax.swing.JCheckBox;
+
+public class AlvarezListExamplesFrame extends JFrame {
+
+	private JPanel contentPane;
+	private final JButton btnPrint = new JButton("Print");
+	private final JTextArea textArea = new JTextArea();
+	private final JScrollPane scrollPane_1 = new JScrollPane();
+	private final JList list = new JList();
+	private final JScrollPane scrollPane = new JScrollPane();
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					AlvarezListExamplesFrame frame = new AlvarezListExamplesFrame();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public AlvarezListExamplesFrame() {
+		jbInit();
+	}
+	private void jbInit() {
+		setTitle("Alvarez List Selection");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		btnPrint.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				do_btnPrint_actionPerformed(e);
+			}
+		});
+		btnPrint.setBounds(285, 183, 117, 29);
+		
+		contentPane.add(btnPrint);
+		scrollPane_1.setBounds(262, 20, 162, 145);
+		
+		contentPane.add(scrollPane_1);
+		scrollPane_1.setViewportView(textArea);
+		scrollPane.setBounds(17, 19, 141, 107);
+		
+		contentPane.add(scrollPane);
+		list.setToolTipText("One\nTwo\nThree\nFour\nFive\nSix\nSeven\nEight\nNine\nTen");
+		scrollPane.setViewportView(list);
+	}
+	protected void do_btnPrint_actionPerformed(ActionEvent e) {
+		//List<String> theList = OptionList.getSelectedValues 
+	}
+}
