@@ -1,0 +1,77 @@
+10 pts
+
+1. List the ordno and dollars of all orders.
+
+Correct output
+Correct SQL statement
+SQL statement is readable
+
+
+2. List the name and city of agents named Smith.
+
+Correct output
+Correct SQL statement
+SQL statement is readable
+
+
+3. List the pid, name, and priceUSD of products with quantity more than
+208,000.
+
+Correct output
+Correct SQL statement
+SQL statement is readable
+
+
+4. List the names and cities of customers in Dallas.
+
+Correct output
+Correct SQL statement
+SQL statement is readable
+
+
+5. List the names of agents not in New York and not in Tokyo.
+
+You could also try this:
+where city not in ('New York','Tokyo');
+
+Correct output
+Correct SQL statement
+SQL statement is readable
+
+
+6. List all data for products not in Dallas or Duluth that cost US$1 or more.
+
+Incorrect SQL statement, missing a semicolon at the end of statement!
+Please format your query for better reading. Like this:
+SELECT *  
+FROM Products
+WHERE (city!='Dallas' and city!='Duluth')
+  AND priceUSD >= 1.00;   <-- and don't forget the semicolon
+
+
+7. List all data for orders in January or March.
+
+Correct output
+Correct SQL statement
+SQL statement is readable
+
+
+8. List all data for orders in February less than US$500.
+
+Correct output
+Correct SQL statement
+SQL statement is readable
+
+
+9. List all orders from the customer whose cid is C005.
+
+Correct output
+Correct SQL statement
+SQL statement is readable
+
+
+In general, be careful with the way you are using parenthesis. They were not
+strictly necessary for this lab. Use them only if necessary or if it helps with
+the organization of the SQL statement.
+
+- Dr. Rivas
