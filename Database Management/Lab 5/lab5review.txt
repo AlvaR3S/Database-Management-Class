@@ -1,0 +1,76 @@
+6 pts
+
+Correct output for some queries
+Mostly correct queries
+Mostly correct SQL statements
+SQL statements are somewhat readable
+
+
+1. Show the cities of agents booking an order for a customer whose id is 
+   'c002'. Use joins; no subqueries.
+
+Incorrect output
+- You are joining the wrong tables.
+
+
+2. Show the ids of products ordered through any agent who makes at least 
+   one order for a customer in Dallas, sorted by pid from highest to 
+   lowest. Use joins; no subqueries.
+
+Incorrect output
+- You are joining the wrong tables.
+
+
+5. Show the names of customers who placed at least one order through an 
+   agent in their own city, along with those agent(s’) names.
+
+Incorrect output
+- You are joining the wrong tables.
+- It seems like you did not read the correct instructions for this query. Read
+  it again, please.
+Incorrect SQL statement
+- You missed a semicolon!
+
+
+6. Show the names of customers and agents living in the same city, along 
+   with the name of the shared city, regardless of whether or not the 
+   customer has ever placed an order with that agent.
+
+Incorrect output
+- You are giving an extra city; you only were asked to give the name (singular) 
+  of the shared city.
+- It seems like you did not read the correct instructions for this query. Read
+  it again, please.
+
+
+7. Show the name and city of customers who live in the city that makes the 
+   fewest different kinds of products. (Hint: Use count and group by on 
+   the Products table.)
+
+Incorrect output
+- This one could have been done without joins. 
+- You did not test this query, why?
+- It seems like you did not read the correct instructions for this query. Read
+  it again, please.
+
+
+
+In general: 
+
+- Please do not use tabs for indentation. Use spaces instead.
+
+- Test all your SQL statements.
+
+- Make sure you read all the instructions for queries really well.
+
+- You submitted a text file, that was not runnable, I had to convert your
+  file to the desired format. Please check the file I created lab5.sql
+  Your file, in its current format produced lots of erros. 
+
+- PLEASE only include your queries! You included a lot of other things. 
+
+- Make sure you have semicolons at the end of each of your queries. 
+  Your query produced an error!
+
+
+- Dr. Rivas
